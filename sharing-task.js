@@ -34,7 +34,7 @@ reusable functions that solve specific tasks. This activity encourages:
 // 1. Define the function with two parameters.
 // 2. Format the output string properly.
 // 3. Capitalize the role if needed.
-// 4. Return the result.
+// 4. Return the result.//
 function generateBadge(name, role) {
   return `Name; ${name}, Role; ${role.toUppeerCase()}`;
 }
