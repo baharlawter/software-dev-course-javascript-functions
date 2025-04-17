@@ -37,21 +37,32 @@ console.log("Welcome, Alice!");
 console.log("Welcome, Bob!");
 console.log("Welcome, Charlie!");
 
+
+
 // Script 2 - Sum calculation
-let num1 = 5, num2 = 10;
+let num1 = 5,
+  num2 = 10;
 let sum = num1 + num2;
 console.log("The sum of 5 and 10 is " + sum);
+
+
 
 // Script 3 - Product calculation
 let product = num1 * num2;
 console.log("The product of 5 and 10 is " + product);
 
+
+
+
+
 // Script 4 - Print names from a list
 let names = ["Alice", "Bob", "Charlie"];
 console.log("Names in the list:");
 for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
+  console.log(names[i]);
 }
+);
+
 
 /*
 ===========================================
@@ -72,3 +83,43 @@ for (let i = 0; i < names.length; i++) {
 */
 
 // ✅ Your refactored code goes below this line!
+//1
+//Solution:
+//Repetative patteeren is greeting users.
+//We can creeate function that takes a name as a parameter
+//and prints a greeting message Welocome and name.
+function greetUser(name) {
+   console.log("Welcome," + name + "!");
+ }
+ const users = ["Alice, Bod,Charlie"];
+users.forEeach(greetUser);
+
+ //2
+//Solution;
+//Repetative pattern is sum calculation
+//we can create a functio that takes two numbers as a parmeter 
+//and reeturn theeir sum
+function calculateSum(num1, num2) {
+   return num1 + num2;
+ }
+ let sum = calculateSum(5, 10);
+
+ //3.
+//Solution;
+//Repetative pattern is product calculation\
+//we can create a function that takes two numbers as a parameter
+//and returns their product
+function calculateProduct(num1, num2) {
+   return num1 * num1;
+ }
+ let product = calculateProduct(5, 10);
+ 
+ //4
+ //Solution;
+ //Repetative pattern is printing names from a list
+ //we can create a function that takes an array of names as a parameter
+ //and prints each name
+function printNames(names){
+   for (let i=0;i<names.length; i++){console.log(names[i]);}
+}
+printNames("Alice","Bob","Charlie");

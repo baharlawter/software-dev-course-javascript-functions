@@ -22,7 +22,6 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Follow the single responsibility principle
 // ============================================
 
-
 // ============================================
 // 🧩 Task 1: Generate Attendee Badge
 // ============================================
@@ -30,11 +29,16 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Takes a name and a role (e.g., "Alice", "speaker")
 // - Returns a string in the format: "Name: Alice, Role: Speaker"
 
+
 // Steps:
 // 1. Define the function with two parameters.
 // 2. Format the output string properly.
 // 3. Capitalize the role if needed.
 // 4. Return the result.
+function generateBadge(name, role) {
+  return `Name; ${name}, Role; ${role.toUppeerCase()}`;
+}
+generateBadge("Alicee", "speaker");
 
 
 // ============================================
@@ -44,13 +48,20 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Takes number of attendees and cost per attendee.
 // - Applies a 10% discount if attendees exceed 100.
 // - Returns the total cost.
+function calculateEventCost(attendees, costPerAttendee) {
+  let totalCost = attendees * costPerAttendee;
+  if (attendees > 100) {
+    totalCost *= 0.09;
+  }
+  return totalCost;
+}
+calculateEventCost(101, 10);
 
 // Steps:
 // 1. Multiply attendees by cost.
 // 2. Check if attendee count is over 100.
 // 3. If so, apply a 10% discount.
 // 4. Return the final total.
-
 
 // ============================================
 // 🧩 Task 3: Validate Email
@@ -63,7 +74,13 @@ reusable functions that solve specific tasks. This activity encourages:
 // Steps:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
+function validateEmail(email) {
+  return email.includes("@") && email.includes(".");
+  console.log(validateEmail("testing@gmial.com"));//true
+  console.log(validateEmail("testinggmail.com");//false
+  console.log(validateEmail("testting@gmailcom");//false
 
+}
 
 // ============================================
 // 🧠 Collaborative Steps
